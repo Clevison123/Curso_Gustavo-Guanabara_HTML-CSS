@@ -16,22 +16,27 @@
         }
         table {
             width: 300;
+            border-collapse: collapse;
         }
-        td {
+        th , td {
             text-align: center;
             background-color: darkgray;
             border: 1px solid black;
             padding: 10px;
         }
-        td#mulheres {
+        caption {
+            font: bold;
+            background-color: rgba(255, 255, 255, 0.799);
+        }
+        thead > tr > td {
+            background-color: black;
+            color: white;
+        }
+        th#mulheres {
             background-color: rgba(255, 0, 0, 0.795);  
         }
-        td#homens {
+        th#homens{
             background-color: rgba(0, 0, 255, 0.653);
-        }
-        td.cabeça {
-            color: white;
-            background-color: black;
         }
         td.nfeminino {
             background-color: lightcoral;
@@ -47,59 +52,56 @@
 <body>
     <h1>Desafio das Tabelas</h1>
     <table>
+        <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
                 <td class="cabeça">Grupo</td>
                 <td class="cabeça">Nomes</td>
                 <td colspan="3" class="cabeça">Filmes</td>
             </tr>
-            <tr>
-                <td rowspan="3" id="mulheres">Mulheres</td>
-
-                <td class="nfeminino">Ana Maria Santos</td>
-
-                <td class="filmes">Alien</td>
-                <td class="filmes">Rambo</td>
-                <td class="filmes">Vingadores</td>
-            </tr>
-            <tr>
-                <td class="nfeminino">Beatriz Souza</td>
-
-                <td class="filmes">Hulk</td>
-                <td class="filmes">Inception</td>
-                <td class="filmes">Batman</td>
-            </tr>
-            <tr>
-                <td class="nfeminino">Cláudia Melo</td>
-
-                <td class="filmes">Oblivion</td>
-                <td class="filmes">Matrix</td>
-                <td class="filmes">Big Hero</td>
-            </tr>
-            <tr>
-                <td rowspan="3" id="homens">Homens</td>
-
-                <td class="nmasculino">Bruno Mendonça</td>
-
-                <td class="filmes">Intocáveis</td>
-                <td class="filmes">Amnésia</td>
-                <td class="filmes">Gladiador</td>
-            </tr>
-            <tr>
-                <td class="nmasculino">Daniel Lourenço</td>
-
-                <td class="filmes">Wall-E</td>
-                <td class="filmes">Oldboy</td>
-                <td class="filmes">Dangal</td>
-            </tr>
-            <tr>
-                <td class="nmasculino">Fabiano Mota</td>
-
-                <td class="filmes">Star Wars 5</td>
-                <td class="filmes">Taxi Driver</td>
-                <td class="filmes">Toy Story</td>
-            </tr>
         </thead>
+            <tbory>
+                <tr>
+                    <th rowspan="3" id="mulheres">Mulheres</th>
+
+                    <td class="nfeminino">Ana Maria Santos</td>
+                    <td class="filmes">Alien</td>
+                    <td class="filmes">Rambo</td>
+                    <td class="filmes">Vingadores</td>
+                </tr>
+                <tr>
+                    <td class="nfeminino">Beatriz Souza</td>
+                    <td class="filmes">Hulk</td>
+                    <td class="filmes">Inception</td>
+                    <td class="filmes">Batman</td>
+                </tr>
+                <tr>
+                    <td class="nfeminino">Cláudia Melo</td>
+                    <td class="filmes">Oblivion</td>
+                    <td class="filmes">Matrix</td>
+                    <td class="filmes">Big Hero</td>
+                </tr>
+                <tr>
+                    <th rowspan="3" id="homens">Homens</th>
+
+                    <td class="nmasculino">Bruno Mendonça</td>
+                    <td class="filmes">Intocáveis</td>
+                    <td class="filmes">Amnésia</td>
+                    <td class="filmes">Gladiador</td>
+                </tr>
+                <tr>
+                    <td class="nmasculino">Daniel Lourenço</td>
+                    <td class="filmes">Wall-E</td>
+                    <td class="filmes">Oldboy</td>
+                    <td class="filmes">Dangal</td>
+                </tr>
+                <tr>
+                    <td class="nmasculino">Fabiano Mota</td>
+                    <td class="filmes">Star Wars 5</td>
+                    <td class="filmes">Taxi Driver</td>
+                    <td class="filmes">Toy Story</td>
+                </tr>
+            </tbory>
     </table>
 </body>
 </html>
