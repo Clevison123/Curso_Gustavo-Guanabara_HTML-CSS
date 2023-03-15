@@ -18,19 +18,18 @@
             width: 300;
             border-collapse: collapse;
         }
-        th , td {
-            text-align: center;
-            background-color: darkgray;
-            border: 1px solid black;
-            padding: 10px;
-        }
         caption {
             font: bold;
             background-color: rgba(255, 255, 255, 0.799);
         }
-        thead > tr > td {
-            background-color: black;
+        thead , tfoot {
+            background-color: rgba(0, 0, 0, 0.677);
             color: white;
+        }
+        th , td {
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
         }
         th#mulheres {
             background-color: rgba(255, 0, 0, 0.795);  
@@ -55,14 +54,14 @@
         <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
-                <td class="cabeça">Grupo</td>
-                <td class="cabeça">Nomes</td>
-                <td colspan="3" class="cabeça">Filmes</td>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</th>
             </tr>
         </thead>
             <tbory>
                 <tr>
-                    <th rowspan="3" id="mulheres">Mulheres</th>
+                    <th scope="rowgroup" rowspan="3" id="mulheres">Mulheres</th>
 
                     <td class="nfeminino">Ana Maria Santos</td>
                     <td class="filmes">Alien</td>
@@ -82,7 +81,7 @@
                     <td class="filmes">Big Hero</td>
                 </tr>
                 <tr>
-                    <th rowspan="3" id="homens">Homens</th>
+                    <th scope="rowgroup" rowspan="3" id="homens">Homens</th>
 
                     <td class="nmasculino">Bruno Mendonça</td>
                     <td class="filmes">Intocáveis</td>
@@ -102,6 +101,12 @@
                     <td class="filmes">Toy Story</td>
                 </tr>
             </tbory>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Total de Filmes</th>
+                    <td>18</td>
+                </tr>
+            </tfoot>
     </table>
 </body>
 </html>
