@@ -21,9 +21,24 @@ Grandes telas: acima de 1200px
 }
 */
 
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 @media print {
     body{
-        background-image: url(../imagens/back-print.jpg);
+        background-image: url(../imagens/back-print.jpg); /*desnecessário*/ 
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main h1{
+        
+        text-shadow: none;
+        color: black;
     }
 
 img#phone { display: none; }
